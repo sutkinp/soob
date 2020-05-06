@@ -25,7 +25,7 @@ if ($_POST['name'] || $_POST['pwd'])
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 <body class="text-center">
-
+<div class="container">
         <form class="form-signin" action="auth.php" method="post">
             <h1 class="h3 mb-3 font-weight-normal">Авторизуйтесь</h1>
             <label for="inputEmail" class="sr-only">Логин</label>
@@ -35,7 +35,7 @@ if ($_POST['name'] || $_POST['pwd'])
             <button class="btn btn-primary" type="submit">Войти</button>
             <a class='btn btn-primary' href='index.php' role='button'>Отмена</a>
         </form>
-
+</div">
 </body>
 
 
