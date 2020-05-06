@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect('localhost','admin','RiverPark32959','sutkin');
+$link = mysqli_connect('##','##','##','##');
 $sql = "SELECT * from tasks
         WHERE id='{$_GET['id']}'";
 $sql_res = mysqli_query($link, $sql);
