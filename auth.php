@@ -24,7 +24,7 @@ if ($_POST['name'] || $_POST['pwd'])
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
-<body class="text-center">
+<body>
 
         <form class="form-signin" action="auth.php" method="post">
             <h1 class="h3 mb-3 font-weight-normal">Авторизуйтесь</h1>
