@@ -20,7 +20,7 @@ $per_page = 3;
 $page = 0;
 $start = ($_GET['page'] - 1) * $per_page;
 
-$link = mysqli_connect('localhost','admin','RiverPark32959','sutkin');
+$link = mysqli_connect('##','##','##','##');
 if (!$link)
 {
     die('Ошибка при подключении: ' . mysqli_connect_error());
