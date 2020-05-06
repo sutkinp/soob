@@ -8,7 +8,7 @@ if ($_POST['id'] > 0 && $_COOKIE['auth'] != sha1('admin'.$_SERVER['REMOTE_ADDR']
 }
 
 
-$link = mysqli_connect('localhost','admin','RiverPark32959','sutkin');
+$link = mysqli_connect('##','##','##','##');
 if (!$link) {
     die('Ошибка при подключении: ' . mysqli_connect_error());
 }
