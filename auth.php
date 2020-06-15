@@ -3,7 +3,7 @@ if ($_POST['name'] || $_POST['pwd'])
 {
     if ($_POST['name'] == 'admin' && $_POST['pwd'] == '123') {
         setcookie('auth', sha1($_POST['name'] . $_SERVER['REMOTE_ADDR']), time() + 3600, '/');
-        header("Location:index.php");
+        header("Location:ifora.php");
         exit;
     }
     else
@@ -33,9 +33,9 @@ if ($_POST['name'] || $_POST['pwd'])
             <label for="inputPassword" class="sr-only">Пароль</label>
             <input <?=$auth_err?> name="pwd" type="password" id="inputPassword" class="form-control" placeholder="Пароль" required="">
             <button class="btn btn-primary" type="submit">Войти</button>
-            <a class='btn btn-primary' href='index.php' role='button'>Отмена</a>
+            <a class='btn btn-primary' href='ifora.php' role='button'>Отмена</a>
         </form>
-</div">
+</div>
 </body>
 
 
