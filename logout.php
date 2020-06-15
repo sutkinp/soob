@@ -1,6 +1,6 @@
 <?php
 setcookie("auth","", time()-3600, '/');
-header("Location:index.php");
+header("Location:ifora.php");
 exit;
 
 
