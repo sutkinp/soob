@@ -1,4 +1,11 @@
 <?php
+$link = mysqli_connect('localhost','login','pwd','sutkin');
+if (!$link)
+{
+    die('Ошибка при подключении: ' . mysqli_connect_error());
+}
+$link->set_charset("utf8");
+
 function SendMail($from, $fname, $to, $tname, $subj, $mail, $attach = null, $ishtml = false)
 {
     global $_das, $das;
@@ -22,13 +29,14 @@ function SendMail($from, $fname, $to, $tname, $subj, $mail, $attach = null, $ish
     if($attach != null){
         $m->attach($attach['content'], $attach['type'], $attach['name'], 'utf-8');
     }
-    $smtp = SMTP5::connect('mail.rp.lc');
+
+    $smtp = SMTP5::connect('smtp.gmail.com',465,'botsoob@gmail.com','!@#123qwe','ssl');
     $m->Send($smtp);
 }
 
 function mquery($sql){
     global $link;
     $R = mysqli_query($link, $sql);
-    if (mysqli_errno($link)){echo mysqli_error($link);}
+//    if (mysqli_errno($link)){echo mysqli_error($link);}
     return $R;
 }
